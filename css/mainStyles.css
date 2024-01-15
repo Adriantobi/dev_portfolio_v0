@@ -1,0 +1,904 @@
+/*FONTS*/
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;500&display=swap');
+
+
+
+* {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Circular Std', sans-serif;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+#bodySection {
+    background-color: #fff;
+    height: 100svh;
+    width: 100vw;
+    border-radius: 10px;
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+}
+
+#logo {
+    background-color: #025cb1;
+    width: 220px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px #dbdbdb;
+}
+
+#logoText {
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+    line-height: 60px;
+    background: none;
+    font-weight: 900;
+}
+
+#account {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    float: right;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    right: 30px;
+    top: 25px;
+    cursor: pointer;
+}
+
+#accountIcon {
+    height: 40px;
+    position: absolute;
+    right: -7.5px;
+}
+
+#menuOptions {
+    background-color: transparent;
+    top: 25px;
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    right: 96px;
+}
+
+.menuLink {
+    margin-right: 34px;
+    float: left;
+    cursor: pointer;
+    color:  #025cb1;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+#home, #aboutMe, #experience, #projects {
+    background-color: #000;
+    height: calc(100svh - 100px);
+    width: 100vw;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    display: none;
+    overflow-y: visible;
+    box-shadow: 0px 5px 5px #7e7d7d;
+}
+
+#contact {
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    bottom: calc(0px + 100px);
+    left: 40px;
+}
+
+#home {
+    display: block;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 50px;
+    background-color: transparent;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.folderIcon {
+    background: transparent;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#projectsSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectCard {
+    width: 330px;
+    height: 300px;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #165daf;
+    box-shadow: 0px 10px 50px rgb(27, 27, 27);
+    float: left;
+    margin: 30px;
+    transition: all ease-in-out 0.2s;
+}
+
+.toProject {
+    width: 330px;
+    height: 300px;
+    background-color: transparent;
+    float: right;
+}
+
+.projectCard:hover {
+    box-shadow: 0px 10px 50px rgb(44, 44, 44);
+    margin-top: 25px;
+}
+
+.projectTitle{
+    font-size: 20px;
+    padding: 0 30px;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.projectInfo {
+    padding: 15px 30px 0px 30px;
+    font-size: 16px;
+}
+
+.projectTitle, .projectInfo {
+    background-color: transparent;
+    display: flex;
+}
+
+.toGetToProject {
+    background-color: transparent;
+    display: flex;
+    width: auto;
+    justify-content: flex-end;
+    margin-top: -40px;
+    margin-right: 30px;
+}
+
+.gitHub, .externalLink {
+    background-color: transparent;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.gitHub {
+    margin-right: 10px;
+}
+
+.gitHubIcon, .externalLinkIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.gitHub:hover {
+    stroke: #d9d9d9;
+}
+
+.projectImage {
+    border-radius: 8px;
+    width: 600px;
+    cursor: pointer;
+    transition: filter .1s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.projectImage:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.featureProjectInfo {
+    width: 495px;
+    height: 123px;
+    background-color: #165daf;
+    position: absolute;
+    box-shadow: 0px 10px 50px rgb(44, 44, 44);
+    border-radius: 6px;
+}
+
+.featureProjectTitle {
+    font-size: 28px;
+    position: absolute;
+    padding: 10px;
+    background-color: transparent;
+    transition: color ease-in-out 0.2s;
+}
+
+.featureProjectTitle:hover {
+    color: #165daf;
+}
+
+#firstFeatureProjectTitle {
+    display: flex;
+    float: right;
+    margin-left: 600px;
+    top: 150px;
+}
+
+#secondFeatureProjectTitle {
+    display: flex;
+    float: left;
+    margin-left: 100px;
+    top: 530px;
+}
+
+#firstFeatureProjectInfo {
+    display: flex;
+    float: right;
+    margin-left: 500px;
+    top: 225px;
+}
+
+#secondFeatureProjectInfo {
+    display: flex;
+    float: left;
+    margin-left: 100px;
+    top: 600px;
+}
+
+#secondFeatureProjectImage {
+    margin-top: 50px;
+    margin-left: 500px;
+}
+
+#thirdFeatureProjectTitle {
+    display: flex;
+    float: right;
+    margin-left: 600px;
+    top: 880px;
+}
+
+#thirdFeatureProjectInfo {
+    display: flex;
+    float: right;
+    margin-left: 500px;
+    top: 955px;
+}
+
+#thirdFeatureProjectImage {
+    margin-top: 50px;
+    margin-right: 500px;
+}
+
+#otherProjectsTitle {
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+@media(max-width: 1200px) {
+    #mainProjects {
+        display: none;
+    }
+    
+    #otherProjects {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #otherProjectsTitle {
+        display: none;
+    }
+
+    #projectsSection {
+        margin-bottom: 50px;
+    }
+}
+
+@media(min-width: 1200px) {
+    #projectCard1, #projectCard2,#projectCard4 {
+        display: none;
+    }
+}
+
+.usedTechnologies {
+    background-color: transparent;
+    padding: 30px;
+    font-size: 14px;
+    font-family: 'Source Code Pro', monospace;
+    color: #9ccbf8;
+    font-weight: 300;
+}
+
+#introSection {
+    display: flex;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 200px;
+    flex-wrap: wrap;
+}
+
+#hello {
+    font-family: 'Source Code Pro', monospace;
+    color: #9ccbf8;
+    font-weight: 300;
+    font-size: 1vw;
+    width: 100vw;
+    height: 100%;
+}
+
+.largeHeading {
+    font-size: 4vw;
+    width: 100vw;
+}
+
+h3.largeHeading {
+    color: #a8b2b9;
+}
+
+code {
+    color: red;
+    background-color: yellow;
+}
+
+#shortInfoOnMe {
+    width: 30vw;
+    color: #a8b2b9;
+    font-size: 20px;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+@media(max-width: 1420px) {
+    #introSection {
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        flex-wrap: wrap;
+    }
+    #hello {
+        font-size: 20px;
+    }
+    
+    .largeHeading {
+        font-size: 85px;
+    }
+    
+    #shortInfoOnMe {
+        width: 100vw;
+    }
+}
+
+#aboutSection {
+    display: flex;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+#aboutInfo {
+    width: 30vw;
+    color: #a8b2b9;
+    font-size: 18px;
+}
+
+.aboutText {
+    padding: 10px;
+}
+
+#knownTechnologies li {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    list-style-type: square;
+}
+
+li {
+    list-style-type: square;
+}
+
+@media(max-width: 1250px) {
+    #aboutSection {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+
+    #aboutInfo {
+        width: 100vw;
+    }
+}
+
+#experienceSection {
+    display: flex;
+    padding-left: 500px;
+    padding-right: 500px;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+}
+
+#jobsAndExperience {
+    display: flex;
+    padding: 40px;
+    background-color: transparent;
+    justify-content: center;
+}
+
+#allJobs {
+    flex-direction: column;
+}
+
+.jobName {
+    font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    padding-left: 10px;
+    transition: all ease-in-out 0.4s;
+    display: flex;
+    align-items: center;
+}
+
+.jobName:hover {
+    background-color: #165daf !important;
+}
+
+.jobInfo {
+    font-size: 18px;
+    width: 420px;
+    height: 340px;
+    padding: 40px;
+    float: right;
+    margin-top: -40px;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.jobDetails {
+    flex-wrap: wrap;
+    background-color: transparent;
+    padding-top: 30px;
+}
+
+.timeAtJob {
+    font-family: 'Source Code Pro', monospace;
+    background-color: transparent;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.jobStatus {
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.jobInfo li {
+    background-color: transparent;
+}
+
+.jobLink {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.jobLink:hover {
+    color: #165daf !important;
+    background-color: transparent;
+    transition: all ease-in-out 0.2s;
+}
+
+.jobLink, .role {
+    font-size: 22px;
+    background-color: transparent;
+}
+
+#panel0 {
+    display: flex;
+}
+
+#panel1, #panel2, #panel3 {
+    display: none;
+}
+
+#panel0Btn {
+    background-color: #165daf;
+}
+
+#jobPanel {
+    background-color: transparent;
+}
+
+@media(max-width: 1800px) {
+    #experienceSection {
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 860px) {
+
+    #allJobs {
+        display: flex;
+        left: 40px;
+        position: absolute;
+    }
+    
+    #jobPanels {
+        display: flex;
+        position: absolute;
+        right: 0px;
+    }
+}
+
+@media(max-width: 730px) {
+    #experienceSection {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: auto;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #allJobs {
+        display: flex;
+        width: 100vw;
+        height: auto;
+        justify-content: center;
+        left: 0px;
+        flex-direction: row;
+    }
+
+    .jobName {
+        display: flex;
+        text-align: center;
+        padding: 0px;
+        justify-content: center;
+    }
+
+    #jobPanels {
+        display: flex;
+        position: absolute;
+        top: 230px;
+        padding-left: 30px;
+        justify-content: center;
+    }
+
+    .jobInfo {
+        width: calc(100vw - 100px);
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#mobileMenu {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+
+#mobileMenuTicker {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: inherit;
+    border: inherit;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    transform: rotate(-135deg);
+    border-radius: 0 0 0 .25em;
+}
+
+#mobileMenuSection {
+    background-color: transparent;
+}
+
+@media (max-width: 720px) {
+    #mobileMenuOptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 6px #1e242b;
+        background-color: #232931;
+        z-index: 1;
+        position: absolute;
+        top: 70px;
+        display: none;
+        padding: 40px;
+        overflow: visible;
+        right: 30px;
+    }
+
+    .menuLink {
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+        border: 1px solid#fff;
+        color: #fff;
+    }
+
+    #mobileMenu {
+        display: flex;
+        left: 25px;
+    }
+
+    #mobileMenuBar {
+        display: flex;
+        width: calc(100vw - 20px);
+        height: 52px;
+        position: relative;
+        z-index: 1000;
+        background-color: #025cb1;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 10px; 
+    }
+
+    #mobileMenuOptions {
+        left: 10px;
+        z-index: 3100;
+    }
+
+    #mobileMenu {
+        background-color: transparent;
+        float: left;
+        top: 11px;
+    }
+
+    .feather-menu {
+        stroke: #000;
+        width: 30px;
+        height: 30px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #account {
+        display: flex;
+        top: 9px;
+        right: 25px;
+        width: 35px;
+        height: 35px;
+    }
+
+    #accountIcon {
+        height: 35px;
+        position: absolute;
+        right: -7px;
+    }
+
+    #logoText {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #home, #aboutMe, #experience, #projects {
+        min-height: calc(100svh - 80px);
+    }
+}
+
+@media(max-width: 660px) {
+    .projectCard {
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    #otherProjects {
+        margin: 0;
+    }
+}
+
+@media(min-width: 721px) {
+    .menuLink:hover {
+        border-bottom: 2px solid #025cb1 !important;
+    }
+    
+    #menuOptions {
+        display: flex !important;
+    }
+
+    #mobileMenuBar {
+        display: none;
+    }
+
+    #mobileMenuOptions {
+        display: none;
+    }
+}
+
+#contactSection {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.socialLink {
+    margin: 8px 0;
+    display: flex;
+    height: auto;
+}
+
+.socialLinkIcon:hover {
+    stroke: #165daf;
+}
+
+@media(max-width: 1420px) {
+    #contact {
+        display: flex;
+        width: calc(100vw - 80px);
+        justify-content: center;
+        bottom: 20px;
+    }
+
+    #contactSection {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #000;
+        border-radius: 8px;
+        flex-direction: row;
+    }
+
+    .socialLink {
+        margin: 8px 8px;
+        display: flex;
+        height: auto;
+    }
+}
+
+#resume {
+    display: flex;
+    background-color: transparent;
+    color: #025cb1;
+    border: 2px solid #165daf;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background-color ease-in-out 0.2s;
+}
+
+@media(min-width: 720px) {
+    #resume:hover {
+        background-color: #eaecee;
+    }
+}
+
+@media(max-width: 720px) {
+    #resume {
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid#fff;
+        color: #fff;
+    }
+}
+
+@media (max-width: 468px) {
+    #allJobs {
+        width: fit-content;
+        overflow-x: auto !important;
+    }
+    #allJobOptions {
+        width: 100vw;
+        height: 40px;
+        overflow-x: scroll;
+        position: absolute;
+    }
+    #allJobOptions::-webkit-scrollbar {
+        display: none;
+    }
+    .jobName {
+        width: 120px;
+    }
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: rgb(101, 150, 150);
+    background: rgb(76, 81, 112);
+}
+  
+::selection {
+    color: rgb(101, 150, 150);
+    background: rgb(76, 81, 112);
+}
+
+::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+    display: none;
+}
+  
+::-webkit-scrollbar-track {
+    background: #000;        /* color of the tracking area */
+    border-radius: 100%;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #CFD8DC;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #000;  /* creates padding around scroll thumb */
+}
+  
+.feather {
+    background-color: transparent;
+}
+
+.feather-folder {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+
+.feather-menu {
+    stroke: #165daf;
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 720px) {
+    .feather-menu {
+        stroke: #fff;
+        width: 30px;
+        height: 30px;
+    }
+}
